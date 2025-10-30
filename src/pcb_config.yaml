@@ -1,0 +1,29 @@
+# src/pcb_config.yaml
+# Dataset configuration for PCB defect detection
+# 'path' is relative to the script execution location (usually the repository root)
+path: ../data
+
+# Number of defect classes
+nc: 6
+
+# Class names (must match your annotation labels)
+names:
+  - missing_hole
+  - mouse_bite
+  - open_circuit
+  - short
+  - spur
+  - spurious_copper
+
+# Dataset splits (paths are relative to the `path` above)
+train: images/train
+val: images/val
+test: images/test
+
+# Optional training/runtime hints (commonly used by training scripts)
+# Image size (pixels)
+img_size: 640
+# Batch size
+batch_size: 16
+# RNG seed for reproducibility
+seed: 42
